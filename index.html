@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="유진 · 프론트엔드 개발자 포트폴리오. 대표 프로젝트 5개와 사용 기술을 한 곳에 모아 각 저장소로 바로 이동할 수 있는 허브입니다." />
+    <meta name="theme-color" content="#f4f1ea" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23213d35'/><rect x='9' y='9' width='14' height='14' rx='3' fill='%23c8f04d'/></svg>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="유진 | 프론트엔드 개발자" />
+    <meta property="og:description" content="대표 프로젝트 5개와 사용 기술을 한 곳에 모은 포트폴리오 허브" />
+    <meta name="twitter:card" content="summary" />
+    <title>유진 | 프론트엔드 개발자</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=10" />
+  </head>
+  <body>
+    <a class="skip-link" href="#projects">프로젝트 목록으로 바로 가기</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="첫 화면으로 이동">UZINI<span>·</span></a>
+      <nav aria-label="주요 메뉴">
+        <a href="#projects">프로젝트</a>
+        <a href="#stack">기술</a>
+        <a href="#principles">개발 방식</a>
+        <a href="#contact">연락처</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">FRONTEND DEVELOPER · PORTFOLIO</p>
+          <h1>만든 것을 <em>직접 열어보고</em><br />확인할 수 있게 정리했습니다.</h1>
+          <p class="hero-description">
+            제조 실행 시스템부터 일정 관리 PWA까지 5개 프로젝트를 만들었습니다.
+            각 프로젝트가 어떤 문제를 풀었고 무엇으로 만들었는지 간단히 정리하고, 저장소로 바로 이동할 수 있게 모았습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">프로젝트 보기 <span aria-hidden="true">↘</span></a>
+            <a class="button button-ghost" href="https://github.com/uzini-1412" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="한눈에 보기">
+          <span class="note-index">AT A GLANCE</span>
+          <dl class="hero-stats">
+            <div><dt>프로젝트</dt><dd>5</dd></div>
+            <div><dt>최대 규모</dt><dd>24<small>도메인</small></dd></div>
+            <div><dt>주력 스택</dt><dd>React<small>· TS</small></dd></div>
+          </dl>
+          <div class="note-status"><span></span> 각 프로젝트 저장소로 바로 이동</div>
+        </aside>
+      </section>
+
+      <section class="marquee" aria-label="핵심 역량">
+        <div class="marquee-track">
+          <p>사용자 흐름 <span>✦</span> 반응형 UI <span>✦</span> 기능 중심 구조 <span>✦</span> API·DB 연계 <span>✦</span> 실행 기반 검증 <span>✦</span></p>
+          <p aria-hidden="true">사용자 흐름 <span>✦</span> 반응형 UI <span>✦</span> 기능 중심 구조 <span>✦</span> API·DB 연계 <span>✦</span> 실행 기반 검증 <span>✦</span></p>
+        </div>
+      </section>
+
+      <section class="projects section-shell" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECTED WORK</p>
+            <h2>문제와 선택이 보이는 프로젝트</h2>
+          </div>
+          <p>카드에서 저장소로 바로 이동할 수 있고, <b>간단 설명</b>에서 어떤 문제를 풀었는지 볼 수 있습니다. 확인되지 않은 기능은 완성된 것으로 표시하지 않습니다.</p>
+        </div>
+
+        <article class="featured-project">
+          <div class="project-visual mes-visual" role="img" aria-label="프론트엔드 4개가 하나의 Spring Boot 백엔드를 공유하고 백엔드가 MySQL과 Redis에 연결된 구조도">
+            <div class="visual-topbar"><span></span><span></span><span></span><b>STANDARD MES</b></div>
+            <div class="arch-shell" aria-hidden="true">
+              <div class="arch-clients">
+                <i>사무 · mes_fe</i><i>현장 · mes_op</i><i>태블릿 · mes_tab</i><i>현황 · dashboard</i>
+              </div>
+              <div class="arch-core"><b>Spring Boot</b><small>REST · JWT · Swagger</small></div>
+              <div class="arch-stores"><i>MySQL 8</i><i>Redis 7</i></div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>01 · FEATURED · 개인 프로젝트</span><span class="status status-progress">개선 중</span></div>
+            <h3>Standard MES</h3>
+            <p class="project-subtitle">수주부터 출하까지, 제조 실행 전 과정을 다루는 풀스택 모노레포</p>
+            <p class="project-description">
+              특정 회사에 종속되지 않도록 일반화한 제조 실행 시스템입니다.
+              하나의 백엔드를 사무·현장·태블릿·대시보드 4개 프론트엔드가 공유하고, 사용 환경별로 UX만 분리했습니다.
+            </p>
+            <ul class="feature-list">
+              <li><span>규모</span>24개 도메인 · 61개 테이블 · 백엔드 1 + 프론트엔드 4</li>
+              <li><span>구조</span>응답 포맷·예외·에러 코드·페이징 계약을 각각 한 곳으로 단일화</li>
+              <li><span>운영</span>핫 리드 캐싱(Caffeine·Redis), LOT 추적성, 공통코드 마스터</li>
+            </ul>
+            <div class="tech-list"><span>Java 21</span><span>Spring Boot 4</span><span>JPA</span><span>React 18</span><span>TypeScript</span><span>MySQL 8</span><span>Redis</span><span>Docker</span></div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://github.com/uzini-1412/standard-single-process-mes" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
+              <button class="text-button" type="button" data-open-modal="modal-mes">간단 설명</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="featured-project featured-flip">
+          <div class="project-visual dayflow-visual" role="img" aria-label="Dayflow 일정 화면을 표현한 그래픽">
+            <div class="visual-topbar"><span></span><span></span><span></span><b>DAYFLOW</b></div>
+            <div class="calendar-shell">
+              <div class="calendar-sidebar">
+                <span class="logo-dot"></span>
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <div class="calendar-main">
+                <div class="calendar-title"><b>8월</b><span>오늘</span></div>
+                <div class="calendar-grid" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i class="event coral"></i><i></i><i></i><i class="event green"></i><i></i><i></i>
+                  <i></i><i></i><i class="today"></i><i></i><i></i><i class="event blue"></i><i></i>
+                  <i></i><i></i><i></i><i class="event yellow"></i><i></i><i></i><i></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>02 · FEATURED · 개인 프로젝트</span><span class="status status-progress">개선 중</span></div>
+            <h3>Dayflow</h3>
+            <p class="project-subtitle">사용자에게 필요한 기능만 남기는 모듈형 일정 관리 PWA</p>
+            <p class="project-description">
+              학생, 직장인, 미니멀 사용자마다 다른 일정 관리 방식을 하나의 고정된 화면에 강요하지 않고,
+              필요한 기능을 선택해 켜고 끌 수 있도록 설계했습니다.
+            </p>
+            <ul class="feature-list">
+              <li><span>사용 경험</span>모바일·태블릿·데스크톱 반응형과 설치형 PWA, 다크 모드</li>
+              <li><span>실시간</span>앱을 쓰는 중엔 SSE 토스트, 꺼져 있을 땐 Web Push</li>
+              <li><span>오프라인</span>연결이 끊겨도 읽기·쓰기, 재연결 시 자동 동기화</li>
+            </ul>
+            <div class="tech-list"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Tailwind v4</span><span>Zustand</span><span>PocketBase</span><span>PWA</span></div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://github.com/uzini-1412/dayflow" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
+              <button class="text-button" type="button" data-open-modal="modal-dayflow">간단 설명</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card card-cms">
+            <div class="card-number">03</div>
+            <div class="card-head"><span class="status status-review">기능 정리 중</span><span>FULL STACK</span></div>
+            <h3>Standard CMS</h3>
+            <p>고객·상담·계약 정보를 일관된 목록 경험으로 관리하는 고객 관리 시스템</p>
+            <div class="card-diagram"><b>LIST UI</b><span>+</span><b>SHARED HOOK</b><span>+</span><b>API</b></div>
+            <div class="tech-list"><span>React 18</span><span>TypeScript</span><span>Express 5</span><span>MySQL 8</span><span>Radix UI</span></div>
+            <div class="card-actions">
+              <a class="button button-primary button-sm" href="https://github.com/uzini-1412/standard-cms" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
+              <button class="text-button" type="button" data-open-modal="modal-cms">간단 설명</button>
+            </div>
+          </article>
+
+          <article class="project-card card-auto">
+            <div class="card-number">04</div>
+            <div class="card-head"><span class="status status-review">정리 중</span><span>TOOLING</span></div>
+            <h3>Automation Suite</h3>
+            <p>반복되는 개발·업무 과정을 CLI로 옮긴 개인 자동화 도구 모음</p>
+            <div class="card-diagram"><b>DEV CONSOLE</b><span>·</span><b>업무일지</b><span>·</span><b>LOG AGENT</b></div>
+            <div class="tech-list"><span>Python</span><span>Claude</span><span>CLI</span><span>Git workflow</span></div>
+            <div class="card-actions">
+              <a class="button button-primary button-sm" href="https://github.com/uzini-1412/automation-suite" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
+              <button class="text-button" type="button" data-open-modal="modal-auto">간단 설명</button>
+            </div>
+          </article>
+
+          <article class="project-card card-goorm">
+            <div class="card-number">05</div>
+            <div class="card-head"><span class="status status-archive">아카이브</span><span>TEAM</span></div>
+            <h3>Web IDE</h3>
+            <p>구름톤 딥다이브 팀 프로젝트 — 브라우저에서 코드를 작성하고 실행하는 웹 IDE</p>
+            <div class="card-diagram"><b>REACT FE</b><span>→</span><b>SPRING BE</b></div>
+            <div class="tech-list"><span>React</span><span>Spring</span><span>Java</span><span>팀 프로젝트</span></div>
+            <div class="card-actions">
+              <a class="button button-primary button-sm" href="https://github.com/uzini-1412/goorm_team_project" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
+              <button class="text-button" type="button" data-open-modal="modal-goorm">간단 설명</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="stack section-shell" id="stack">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TECH STACK</p>
+            <h2>실제로 써 본 기술만</h2>
+          </div>
+          <p>목록으로만 아는 기술이 아니라, 위 5개 프로젝트에서 직접 사용하고 실행까지 확인한 것을 적었습니다.</p>
+        </div>
+        <dl class="stack-grid">
+          <div>
+            <dt>언어</dt>
+            <dd class="tech-list"><span>TypeScript</span><span>JavaScript</span><span>Java 21</span><span>Python</span><span>SQL</span></dd>
+          </div>
+          <div>
+            <dt>프론트엔드</dt>
+            <dd class="tech-list"><span>React 18 / 19</span><span>Vite</span><span>Tailwind CSS</span><span>Zustand</span><span>React Router</span><span>Radix UI</span><span>Recharts</span><span>PWA · Service Worker</span></dd>
+          </div>
+          <div>
+            <dt>백엔드</dt>
+            <dd class="tech-list"><span>Spring Boot 4</span><span>Spring Data JPA</span><span>Spring Security · JWT</span><span>Node.js</span><span>Express 5</span><span>PocketBase</span><span>REST · OpenAPI</span></dd>
+          </div>
+          <div>
+            <dt>데이터</dt>
+            <dd class="tech-list"><span>MySQL 8</span><span>Redis 7</span><span>JPA · 스키마 설계</span><span>Caffeine 캐시</span></dd>
+          </div>
+          <div>
+            <dt>인프라 · 도구</dt>
+            <dd class="tech-list"><span>Docker Compose</span><span>Nginx</span><span>Gradle</span><span>Git</span><span>Swagger UI</span></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="principles" id="principles">
+        <div class="section-shell">
+          <div class="section-heading light-heading">
+            <div><p class="eyebrow">HOW I BUILD</p><h2>AI를 사용해도,<br />판단은 남겨둡니다.</h2></div>
+            <p>요구사항을 정하고, 결과를 실행하며, 오류를 해결하고, 검증된 상태를 기록하는 반복이 제 개발 방식입니다.</p>
+          </div>
+          <ol class="principle-list">
+            <li><span>01</span><div><h3>문제와 사용자부터 정의</h3><p>기술보다 먼저 누가 어떤 상황에서 왜 사용하는지 정리합니다.</p><button class="text-button principle-trigger" type="button" data-open-modal="modal-principle-define">자세히 보기 <span aria-hidden="true">↗</span></button></div></li>
+            <li><span>02</span><div><h3>작게 실행하고 확인</h3><p>한 번에 완성됐다고 가정하지 않고 실제 화면과 흐름을 반복해서 점검합니다.</p><button class="text-button principle-trigger" type="button" data-open-modal="modal-principle-iterate">자세히 보기 <span aria-hidden="true">↗</span></button></div></li>
+            <li><span>03</span><div><h3>공통 구조로 복잡도 관리</h3><p>반복되는 UI와 로직은 공통화하고 기능의 책임이 섞이지 않도록 나눕니다.</p><button class="text-button principle-trigger" type="button" data-open-modal="modal-principle-structure">자세히 보기 <span aria-hidden="true">↗</span></button></div></li>
+            <li><span>04</span><div><h3>확인한 것만 공개</h3><p>빌드·배포·핵심 흐름을 검증한 기능과 개선 중인 기능을 구분합니다.</p><button class="text-button principle-trigger" type="button" data-open-modal="modal-principle-verify">자세히 보기 <span aria-hidden="true">↗</span></button></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-shell contact-inner">
+          <p class="eyebrow">LET'S WORK TOGETHER</p>
+          <h2>사용하기 좋은 제품을<br />함께 만들고 싶습니다.</h2>
+          <div class="contact-links">
+            <a href="mailto:yj040409@gmail.com">yj040409@gmail.com <span>↗</span></a>
+            <a href="https://github.com/uzini-1412" target="_blank" rel="noreferrer">github.com/uzini-1412 <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© <span id="year"></span> UZINI</span><span>Frontend Developer Portfolio</span></footer>
+
+    <!-- ============ 프로젝트 상세 ============ -->
+
+    <dialog class="detail" id="modal-mes" aria-labelledby="modal-mes-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">01 · FULL STACK MONOREPO</p>
+        <h2 id="modal-mes-title">Standard MES</h2>
+        <p class="detail-lead">수주 · 자재 · 생산 · 품질 · 설비 · 출하까지 제조 실행 전 과정을 다루는 표준 MES입니다. 특정 회사에 종속되지 않도록 도메인을 일반화했습니다.</p>
+        <p class="project-role">개인 프로젝트 · 도메인 설계, DB 스키마, 백엔드, 프론트엔드 4종까지 전체 구현</p>
+
+        <div class="detail-stats">
+          <div><b>24</b><span>도메인</span></div>
+          <div><b>61</b><span>테이블</span></div>
+          <div><b>4+1</b><span>프론트 + 백엔드</span></div>
+        </div>
+
+        <h3>풀려던 문제</h3>
+        <p>제조 현장에서 사무직, 작업자, 태블릿 사용자, 관리자는 같은 데이터를 보지만 필요한 화면과 조작이 전혀 다릅니다. 하나의 화면으로 모두를 만족시키려다 어느 쪽에도 맞지 않는 UI가 되는 문제를 해결하려 했습니다.</p>
+
+        <h3>설계 선택</h3>
+        <ul class="detail-list">
+          <li><b>단일 백엔드 · 다중 프론트엔드</b> — Spring Boot 백엔드 하나를 4개 프론트가 공유합니다. 데이터와 권한 규칙은 한 곳에서 관리하고, 사용 환경별로 UX만 분리했습니다.</li>
+          <li><b>횡단 관심사 단일화</b> — 응답 포맷, 예외 처리, 에러 코드, 페이징 계약을 각각 한 곳에 모았습니다. 한 곳만 고치면 24개 도메인 전체에 전파됩니다.</li>
+          <li><b>도메인 값의 데이터화</b> — 상태·구분 값을 코드에 하드코딩하지 않고 공통코드 마스터로 관리해, 업종이 달라져도 코드 수정 없이 대응합니다.</li>
+          <li><b>운영 고려</b> — 작업지시 목록 같은 핫 리드는 Caffeine·Redis로 캐싱하고, 생산 이력은 LOT 단위로 추적 가능하게 채번합니다.</li>
+        </ul>
+
+        <p class="detail-hint">설치와 실행 방법, 상세 문서는 저장소 README에 정리돼 있습니다.</p>
+
+        <div class="detail-links">
+          <a class="button button-primary" href="https://github.com/uzini-1412/standard-single-process-mes" target="_blank" rel="noreferrer">저장소 열기 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/uzini-1412/standard-single-process-mes/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noreferrer">아키텍처 노트 <span>↗</span></a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-dayflow" aria-labelledby="modal-dayflow-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">02 · PRODUCT · PWA</p>
+        <h2 id="modal-dayflow-title">Dayflow</h2>
+        <p class="detail-lead">필요한 기능만 켜서 쓰는 모듈형 일정 관리 웹앱입니다. 학부 팀 프로젝트를 현재의 기술로 다시 만든 개인 리메이크입니다.</p>
+        <p class="project-role">개인 프로젝트 · 기획, 백엔드, 프론트엔드 전체 구현</p>
+
+        <div class="detail-stats">
+          <div><b>3</b><span>사용 모드</span></div>
+          <div><b>PWA</b><span>설치형</span></div>
+          <div><b>오프라인</b><span>쓰기 지원</span></div>
+        </div>
+
+        <h3>풀려던 문제</h3>
+        <p>일정 관리 앱은 기능이 많을수록 좋아 보이지만, 실제로는 학생·직장인·미니멀 사용자가 쓰는 기능이 서로 거의 겹치지 않습니다. 모두에게 같은 화면을 강요하면 누구에게나 복잡한 앱이 됩니다.</p>
+
+        <h3>설계 선택</h3>
+        <ul class="detail-list">
+          <li><b>기능 모듈 토글</b> — 학생 · 직장인 · 미니멀 모드로 기능 묶음을 켜고 끕니다. 안 쓰는 기능은 화면에서 아예 사라집니다.</li>
+          <li><b>상황에 맞는 알림 경로</b> — 앱을 보고 있을 땐 SSE 실시간 토스트, 앱이 꺼져 있을 땐 Web Push로 갈라 처리했습니다.</li>
+          <li><b>오프라인 우선</b> — 연결이 끊겨도 읽기·생성·수정·삭제가 되고, 재연결 시 자동으로 동기화합니다.</li>
+          <li><b>가벼운 백엔드</b> — PocketBase 단일 실행 파일을 써서 계정 발급이나 클라우드 설정 없이 누구나 로컬에서 바로 띄울 수 있게 했습니다.</li>
+        </ul>
+
+        <p class="detail-hint">설치와 실행 방법, 상세 문서는 저장소 README에 정리돼 있습니다.</p>
+
+        <div class="detail-links">
+          <a class="button button-primary" href="https://github.com/uzini-1412/dayflow" target="_blank" rel="noreferrer">저장소 열기 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/uzini-1412/dayflow/blob/main/schedule-pwa/README.md" target="_blank" rel="noreferrer">README <span>↗</span></a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-cms" aria-labelledby="modal-cms-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">03 · FULL STACK</p>
+        <h2 id="modal-cms-title">Standard CMS</h2>
+        <p class="detail-lead">영업·상담 조직을 위한 고객 관리 시스템입니다. 고객 정보, 상담 이력, 계약, 담당자를 한 화면 흐름 안에서 관리합니다.</p>
+        <p class="project-role">개인 프로젝트 · 기획, 백엔드, 프론트엔드 전체 구현</p>
+
+        <h3>풀려던 문제</h3>
+        <p>고객 관리 화면은 목록 · 검색 · 필터 · 상세가 계속 반복되는데, 화면마다 따로 만들면 조작 방식이 조금씩 달라져 사용자가 매번 다시 배워야 합니다.</p>
+
+        <h3>설계 선택</h3>
+        <ul class="detail-list">
+          <li><b>목록 경험의 통일</b> — 고객·상담·계약 목록이 같은 검색·필터·페이징 규칙을 공유하도록 공통 훅으로 묶었습니다.</li>
+          <li><b>대시보드로 맥락 제공</b> — 6개월 추이와 지역별 분포를 recharts로 시각화해, 목록에 들어가기 전에 전체 상황을 먼저 보게 했습니다.</li>
+          <li><b>빠른 등록</b> — 전체 폼을 열지 않고도 최소 항목만으로 즉시 등록할 수 있는 경로를 따로 뒀습니다.</li>
+          <li><b>접근성 있는 기본 요소</b> — 모달·드롭다운 등은 Radix UI를 써서 키보드 조작과 포커스 관리를 직접 구현하지 않았습니다.</li>
+        </ul>
+
+        <p class="detail-hint">설치와 실행 방법, 상세 문서는 저장소 README에 정리돼 있습니다.</p>
+
+        <div class="detail-links">
+          <a class="button button-primary" href="https://github.com/uzini-1412/standard-cms" target="_blank" rel="noreferrer">저장소 열기 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/uzini-1412/standard-cms/blob/main/README.md" target="_blank" rel="noreferrer">README <span>↗</span></a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-auto" aria-labelledby="modal-auto-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">04 · TOOLING</p>
+        <h2 id="modal-auto-title">Automation Suite</h2>
+        <p class="detail-lead">개발과 업무에서 반복되던 과정을 CLI 도구로 옮긴 개인 자동화 모음입니다.</p>
+        <p class="project-role">개인 프로젝트 · 전체 구현</p>
+
+        <h3>구성</h3>
+        <ul class="detail-list">
+          <li><b>개발 콘솔</b> — 브랜치 생성, 코드 리뷰, 자동 개발, 테스트, 최적화 단계를 하나의 진입점에서 실행합니다.</li>
+          <li><b>주간 업무일지 생성기</b> — 커밋과 작업 기록을 모아 주간 단위 업무일지 초안을 만듭니다.</li>
+          <li><b>로그 분석 에이전트</b> — 로그를 읽어 문제 지점과 원인 후보를 정리합니다.</li>
+        </ul>
+
+        <h3>만든 이유</h3>
+        <p>같은 작업을 반복하면서 손이 많이 가는 부분이 어디인지 기록해 두었다가, 그중 판단이 크게 필요 없는 단계부터 자동화했습니다. 판단이 필요한 지점은 자동화하지 않고 사람이 확인하도록 남겨 뒀습니다.</p>
+
+        <p class="detail-hint">설치와 실행 방법, 상세 문서는 저장소 README에 정리돼 있습니다.</p>
+
+        <div class="detail-links">
+          <a class="button button-primary" href="https://github.com/uzini-1412/automation-suite" target="_blank" rel="noreferrer">저장소 열기 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-goorm" aria-labelledby="modal-goorm-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">05 · TEAM PROJECT · ARCHIVE</p>
+        <h2 id="modal-goorm-title">Web IDE</h2>
+        <p class="detail-lead">구름톤 딥다이브 과정에서 팀으로 만든 웹 IDE입니다. 브라우저에서 코드를 작성하고 실행할 수 있는 개발 환경을 목표로 했습니다.</p>
+        <p class="project-role">팀 프로젝트 · 담당 역할은 저장소 정리와 함께 기재 예정</p>
+
+        <h3>구성</h3>
+        <ul class="detail-list">
+          <li><b>프론트엔드</b> — React 기반 에디터 화면과 파일 트리</li>
+          <li><b>백엔드</b> — Spring 기반 API 및 실행 환경 연동</li>
+        </ul>
+
+        <h3>현재 상태</h3>
+        <p>현재 저장소에는 팀 산출물이 압축 파일 형태로만 보관돼 있습니다. 소스를 풀어 커밋 이력과 실행 방법을 갖춘 형태로 다시 정리할 예정이며, 그 전까지는 아카이브로 표시합니다.</p>
+
+        <div class="detail-links">
+          <a class="button button-primary" href="https://github.com/uzini-1412/goorm_team_project" target="_blank" rel="noreferrer">저장소 열기 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-principle-define" aria-labelledby="modal-principle-define-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">01 · HOW I BUILD</p>
+        <h2 id="modal-principle-define-title">문제와 사용자부터 정의</h2>
+        <p class="detail-lead">기술 선택보다 먼저 누가, 어떤 상황에서, 왜 쓰는지를 정리합니다. 같은 기능이라도 사용자가 다르면 다른 화면이 맞다고 봅니다.</p>
+
+        <h3>실제 적용</h3>
+        <ul class="detail-list">
+          <li><b>Standard MES</b> — 사무직·현장 작업자·태블릿 사용자·관리자가 같은 데이터를 보지만 필요한 화면이 전혀 달라, 백엔드 1개에 프론트엔드 4개로 나눴습니다.</li>
+          <li><b>Dayflow</b> — 학생·직장인·미니멀 사용자가 쓰는 기능이 거의 겹치지 않아, 기능을 모듈로 쪼개 필요한 것만 켜서 쓰도록 설계했습니다.</li>
+          <li><b>Standard CMS</b> — 목록·검색·필터·상세를 반복해서 쓰는 영업·상담 조직 사용자가 화면마다 다른 조작 방식을 다시 배우지 않도록, 문제를 "목록 경험을 일관되게 만드는 것"으로 좁혀서 정의했습니다.</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-principle-iterate" aria-labelledby="modal-principle-iterate-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">02 · HOW I BUILD</p>
+        <h2 id="modal-principle-iterate-title">작게 실행하고 확인</h2>
+        <p class="detail-lead">기능을 한 번에 완성됐다고 가정하지 않습니다. 작은 단위로 쪼개서 만들고, 만들 때마다 실제로 실행해서 확인한 뒤에만 다음 단계로 넘어갑니다.</p>
+
+        <h3>이렇게 합니다</h3>
+        <ul class="detail-list">
+          <li>화면이든 로직이든 전체를 다 만들어두고 나중에 몰아서 점검하지 않습니다. 작은 조각이 끝나는 대로 그 자리에서 바로 확인합니다.</li>
+          <li>확인되지 않은 부분 위에 다음 작업을 쌓지 않습니다. 앞이 불확실하면 거기서 멈추고 원인부터 찾습니다.</li>
+          <li>눈으로 봐서 판단이 안 서는 문제는 추측으로 고치지 않고, 직접 실행한 결과나 측정값으로 원인을 확인한 뒤에 고칩니다.</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-principle-structure" aria-labelledby="modal-principle-structure-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">03 · HOW I BUILD</p>
+        <h2 id="modal-principle-structure-title">공통 구조로 복잡도 관리</h2>
+        <p class="detail-lead">반복되는 UI와 로직은 공통 구조로 모으고, 기능의 책임이 한 곳에 섞이지 않도록 나눕니다.</p>
+
+        <h3>실제 적용</h3>
+        <ul class="detail-list">
+          <li><b>Standard MES</b> — 응답 포맷, 예외 처리, 에러 코드, 페이징 계약을 각각 한 곳에 모아, 한 곳만 고치면 24개 도메인 전체에 전파되도록 했습니다.</li>
+          <li><b>Standard CMS</b> — 고객·상담·계약 목록이 검색·필터·페이징 규칙을 공통 훅 하나로 공유하도록 묶었습니다.</li>
+          <li><b>Automation Suite</b> — 브랜치 생성·코드 리뷰·테스트·최적화로 흩어지기 쉬운 반복 작업을 개발 콘솔 하나로 묶었습니다.</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog class="detail" id="modal-principle-verify" aria-labelledby="modal-principle-verify-title">
+      <form method="dialog" class="detail-close-form"><button class="detail-close" value="close" aria-label="닫기">✕</button></form>
+      <div class="detail-body">
+        <p class="eyebrow">04 · HOW I BUILD</p>
+        <h2 id="modal-principle-verify-title">확인한 것만 공개</h2>
+        <p class="detail-lead">AI가 생성한 코드를 그대로 믿지 않습니다. 기능이 여러 단계로 이어지는 흐름이면 첫 단계부터 끝 단계까지 순서대로 직접 실행해 보고, 끊김 없이 돌아가는 것만 적용합니다.</p>
+
+        <h3>이렇게 합니다</h3>
+        <ul class="detail-list">
+          <li>AI가 만든 코드라고 검증을 건너뛰지 않습니다. 사람이 짠 코드와 같은 기준으로 실행해서 확인합니다.</li>
+          <li>여러 단계가 순서대로 이어지는 기능은 중간을 건너뛰지 않고, 처음부터 끝까지 차례로 직접 실행해 흐름 전체가 끊기지 않는지 확인합니다.</li>
+          <li>확인되지 않은 부분이 남아 있으면 적용하지 않고, 문서로 현재 기능 상태를 관리합니다.</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <script src="./app.js?v=7"></script>
+  </body>
+</html>
