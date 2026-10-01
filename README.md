@@ -57,6 +57,7 @@
 - 건너뛰기 링크, 포커스 표시 등 키보드 접근성
 - 인쇄 스타일 — 모달 내용까지 이어서 출력, 링크 주소 병기 (총 12쪽)
 - favicon, Open Graph / Twitter 카드 메타
+- GitHub Pages 배포 — https://uzini-1412.github.io/portfolio/ , `og:url` 반영
 
 ### 검증 결과
 
@@ -68,7 +69,7 @@
 
 ### 미완료
 
-- 이 포트폴리오 미배포 → `og:image`, `og:url` 미설정. 이력서에 적을 대표 주소가 아직 없음
+- `og:image` 미설정 (공유 시 미리보기 썸네일 없음) — 실제 화면 캡처 없이 채우지 않음
 - 라이브 데모 링크 없음 — 어느 저장소에도 GitHub Pages나 homepage URL이 설정돼 있지 않음
 - `goorm_team_project`는 저장소에 zip 산출물만 있음 → 소스를 풀어 재정리 필요, 담당 역할 미기재
 - Git 커밋 이력 없음 (`main` 브랜치에 커밋 0개)
@@ -80,6 +81,5 @@
 
 ## 다음 작업
 
-1. 이 포트폴리오를 정적 호스팅에 배포 → `og:url` 반영, 이력서에 쓸 대표 주소 확보
-2. 각 저장소에 homepage URL 설정 → 카드에 라이브 데모 버튼 추가
-3. `goorm_team_project` zip 해제 후 저장소 재구성 및 담당 역할 기재
+1. 각 저장소에 homepage URL 설정 → 카드에 라이브 데모 버튼 추가
+2. `goorm_team_project` zip 해제 후 저장소 재구성 및 담당 역할 기재
