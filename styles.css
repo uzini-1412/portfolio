@@ -97,6 +97,12 @@ nav a:hover::after { right: 0; }
 .project-card h3 { margin-top: 80px; }
 .project-card > p { font-family: var(--kr); max-width: 440px; line-height: 1.7; font-size: 14px; margin: 0; }
 .card-diagram { margin: 32px 0 6px; padding: 18px 0; border-block: 1px solid rgba(27,29,27,.35); display: flex; align-items: center; justify-content: space-between; font-size: 11px; letter-spacing: .08em; }
+.card-terminal { margin: 28px 0 6px; border-radius: 8px; overflow: hidden; background: #1d2824; }
+.terminal-bar { height: 26px; padding-inline: 10px; display: flex; align-items: center; gap: 5px; background: #15201c; }
+.terminal-bar span { width: 7px; height: 7px; border-radius: 50%; background: #45534d; }
+.terminal-body { padding: 12px 14px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; line-height: 1.85; color: #d7ded9; }
+.terminal-body p { margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.terminal-prompt { color: #8fd199; margin-right: 6px; }
 
 .principles { background: var(--forest); color: #f7f4ed; padding-block: 130px; }
 .light-heading { border-bottom: 1px solid rgba(255,255,255,.25); padding-bottom: 60px; }

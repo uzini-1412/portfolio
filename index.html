@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=10" />
+    <link rel="stylesheet" href="./styles.css?v=11" />
   </head>
   <body>
     <a class="skip-link" href="#projects">프로젝트 목록으로 바로 가기</a>
@@ -163,7 +163,15 @@
             <div class="card-head"><span>TOOLING</span></div>
             <h3>Automation Suite</h3>
             <p>반복되는 개발·업무 과정을 CLI로 옮긴 개인 자동화 도구 모음</p>
-            <div class="card-diagram"><b>DEV CONSOLE</b><span>·</span><b>업무일지</b><span>·</span><b>LOG AGENT</b></div>
+            <div class="card-terminal">
+              <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="terminal-body">
+                <p><span class="terminal-prompt">$</span> ./automation-suite</p>
+                <p>[1] 개발 콘솔 — 브랜치 · 리뷰 · 테스트 · 최적화</p>
+                <p>[2] 업무일지 — 주간 작업 요약 생성</p>
+                <p>[3] 로그 에이전트 — 오류 원인 분석</p>
+              </div>
+            </div>
             <div class="tech-list"><span>Python</span><span>Claude</span><span>CLI</span><span>Git workflow</span></div>
             <div class="card-actions">
               <a class="button button-primary button-sm" href="https://github.com/uzini-1412/automation-suite" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
