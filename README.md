@@ -36,7 +36,7 @@
 |---|---|---|---|
 | 01 | Standard MES | `standard-single-process-mes` | 라이브 데모 |
 | 02 | Dayflow | `dayflow` | 라이브 데모 |
-| 03 | Standard CMS | `standard-cms` | 기능 정리 중 |
+| 03 | Standard CMS | `standard-cms` | 라이브 데모 |
 | 04 | Automation Suite | `automation-suite` | 정리 중 |
 | 05 | Web IDE (구름톤 팀 프로젝트) | `goorm_team_project` | 아카이브 |
 
