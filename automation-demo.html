@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Automation Suite의 브랜치 자동 분류 폴백 로직을 브라우저에서 그대로 재현한 데모" />
+    <meta name="theme-color" content="#f4f1ea" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23213d35'/><rect x='9' y='9' width='14' height='14' rx='3' fill='%23c8f04d'/></svg>" />
+    <title>Automation Suite 데모 | 유진</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --paper: #f4f1ea; --ink: #1b1d1b; --muted: #686b66; --line: #cbc8bf;
+        --lime: #c8f04d; --forest: #213d35;
+        --sans: "DM Sans", "Noto Sans KR", sans-serif; --kr: "Noto Sans KR", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); word-break: keep-all; }
+      a { color: inherit; }
+      .shell { width: min(720px, calc(100% - 48px)); margin-inline: auto; padding-block: 56px 80px; }
+      .back { font-family: var(--kr); font-size: 13px; font-weight: 700; display: inline-flex; gap: 8px; margin-bottom: 36px; }
+      .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; margin: 0 0 14px; }
+      h1 { font-size: clamp(28px, 4.5vw, 40px); letter-spacing: -.045em; margin: 0 0 18px; }
+      .lead { font-family: var(--kr); font-size: 15px; line-height: 1.8; color: var(--muted); margin: 0 0 28px; max-width: 58ch; }
+      .notice { font-family: var(--kr); font-size: 13px; line-height: 1.8; color: #5c5f5a; background: #faf8f2; border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin-bottom: 36px; }
+      .notice code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; background: rgba(27,29,27,.07); padding: 1px 5px; border-radius: 4px; }
+      .notice a { font-weight: 700; border-bottom: 1px solid currentColor; }
+
+      label { display: block; font-family: var(--kr); font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+      .hint { font-family: var(--kr); font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+
+      .terminal { border-radius: 10px; overflow: hidden; background: #1d2824; box-shadow: 10px 10px 0 rgba(27,29,27,.12); }
+      .terminal-bar { height: 32px; padding-inline: 12px; display: flex; align-items: center; gap: 6px; background: #15201c; }
+      .terminal-bar span { width: 8px; height: 8px; border-radius: 50%; background: #45534d; }
+      .terminal-bar b { margin-left: auto; font-family: var(--kr); font-size: 9px; letter-spacing: .14em; color: #9dbdb0; }
+      .terminal-io { padding: 18px 20px 22px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.9; color: #d7ded9; }
+      .terminal-io .row { display: flex; align-items: baseline; gap: 8px; }
+      .terminal-io .prompt { color: #8fd199; flex: none; }
+      .terminal-io input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: #f7f4ed; font: inherit; }
+      .terminal-io input::placeholder { color: #5c6b64; }
+      .out { margin-top: 16px; padding-top: 14px; border-top: 1px dashed #3a4a44; white-space: pre-wrap; }
+      .out .k { color: #9dbdb0; }
+      .out .branch { color: var(--lime); font-weight: 700; }
+
+      .links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 32px; }
+      .links a { font-family: var(--kr); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
+
+      @media (prefers-color-scheme: dark) {
+        :root { --paper: #15201c; --ink: #f2f1ea; --muted: #9aa39d; --line: #33423c; }
+        .notice { background: #1b2622; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back" href="./index.html#auto">↖ 포트폴리오로 돌아가기</a>
+
+      <p class="eyebrow">AUTOMATION SUITE · LIVE DEMO</p>
+      <h1>브랜치 자동 분류</h1>
+      <p class="lead">
+        작업 주제를 입력하면 <code style="font-family: ui-monospace, Menlo, Consolas, monospace;">fix</code> /
+        <code style="font-family: ui-monospace, Menlo, Consolas, monospace;">feature</code> 타입과
+        브랜치 이름 슬러그를 실시간으로 만들어 줍니다. 아래에서 직접 타이핑해서 확인해 보세요.
+      </p>
+
+      <div class="notice">
+        이 도구의 평소 동작은 Claude CLI를 호출해 주제를 분류합니다. 그건 브라우저에서 재현할 수 없어서,
+        대신 저장소에 실제로 있는 <b>Claude 호출 실패 시의 폴백 로직</b>을 그대로 JavaScript로 옮겨 동작시켰습니다.
+        규칙 기반이라 Claude가 분류한 결과보다 단순합니다.
+        원본 코드는
+        <a href="https://github.com/uzini-1412/automation-suite/blob/main/ai_agent/ops/branch.py" target="_blank" rel="noreferrer">ops/branch.py</a>의
+        <code>classify()</code> 폴백 분기와
+        <a href="https://github.com/uzini-1412/automation-suite/blob/main/ai_agent/common.py" target="_blank" rel="noreferrer">common.py</a>의
+        <code>kebab_slug()</code>에 있습니다.
+      </div>
+
+      <label for="topic">작업 주제 (영문 권장 — 슬러그가 영문/숫자만 남겨서)</label>
+      <div class="terminal">
+        <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span><b>automation-suite</b></div>
+        <div class="terminal-io">
+          <div class="row">
+            <span class="prompt">$</span>
+            <input id="topic" type="text" value="fix login validation bug" placeholder="작업 주제를 입력해 보세요" autocomplete="off" spellcheck="false" />
+          </div>
+          <div class="out" id="out"></div>
+        </div>
+      </div>
+      <p class="hint">실제 도구는 여기에 더해 base 브랜치로 이동, pull, <code style="font-family: ui-monospace, Menlo, Consolas, monospace;">git checkout -b</code>까지 자동으로 실행합니다 — 데모는 분류 로직까지만입니다.</p>
+
+      <div class="links">
+        <a href="https://github.com/uzini-1412/automation-suite" target="_blank" rel="noreferrer">저장소 열기 ↗</a>
+        <a href="./index.html#auto">간단 설명으로 돌아가기 ↗</a>
+      </div>
+    </main>
+
+    <script>
+      function kebabSlug(text, maxLen) {
+        maxLen = maxLen || 48;
+        var t = text.replace(/[^0-9a-zA-Z\- ]+/g, "-");
+        t = t.replace(/\s+/g, "-");
+        t = t.replace(/^-+|-+$/g, "");
+        t = t.toLowerCase();
+        t = t.replace(/-+/g, "-");
+        t = t.slice(0, maxLen).replace(/^-+|-+$/g, "");
+        return t || "task";
+      }
+
+      function classifyFallback(topic) {
+        var slug = kebabSlug(topic);
+        var keywords = ["버그", "수정", "오류", "고침", "fix"];
+        var type = keywords.some(function (k) { return topic.indexOf(k) !== -1; }) ? "fix" : "feature";
+        return { type: type, slug: slug };
+      }
+
+      var input = document.getElementById("topic");
+      var out = document.getElementById("out");
+
+      function render() {
+        var topic = input.value.trim();
+        var cls = classifyFallback(topic);
+        out.innerHTML =
+          '<span class="k">type</span>&nbsp;' + cls.type +
+          '<br><span class="k">slug</span>&nbsp;' + cls.slug +
+          '<br><span class="k">branch</span>&nbsp;<span class="branch">' + cls.type + "/" + cls.slug + "</span>";
+      }
+
+      input.addEventListener("input", render);
+      render();
+    </script>
+  </body>
+</html>
