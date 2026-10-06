@@ -76,7 +76,7 @@ nav a:hover::after { right: 0; }
 .project-content { padding: 46px; display: flex; flex-direction: column; }
 .project-meta, .card-head { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .1em; }
 .status { font-family: var(--kr); letter-spacing: 0; border-radius: 30px; padding: 6px 10px; }
-.status-progress { background: #fff1cb; color: #805d00; }.status-review { background: rgba(255,255,255,.65); color: #615f5a; }.status-archive { background: rgba(27,29,27,.1); color: #5c5f5a; }
+.status-review { background: rgba(255,255,255,.65); color: #615f5a; }.status-archive { background: rgba(27,29,27,.1); color: #5c5f5a; }
 .project-content h3, .project-card h3 { font-size: 44px; letter-spacing: -.05em; margin: 48px 0 8px; }
 .project-subtitle { font-family: var(--kr); font-size: 18px; font-weight: 600; line-height: 1.55; margin: 0; word-break: keep-all; }
 .project-description { font-family: var(--kr); font-size: 14px; line-height: 1.8; color: var(--muted); margin: 24px 0 28px; word-break: keep-all; }

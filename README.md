@@ -34,8 +34,8 @@
 
 | # | 프로젝트 | 저장소 | 상태 |
 |---|---|---|---|
-| 01 | Standard MES | `standard-single-process-mes` | 개선 중 |
-| 02 | Dayflow | `dayflow` | 개선 중 |
+| 01 | Standard MES | `standard-single-process-mes` | 라이브 데모 |
+| 02 | Dayflow | `dayflow` | 라이브 데모 |
 | 03 | Standard CMS | `standard-cms` | 기능 정리 중 |
 | 04 | Automation Suite | `automation-suite` | 정리 중 |
 | 05 | Web IDE (구름톤 팀 프로젝트) | `goorm_team_project` | 아카이브 |
@@ -50,6 +50,7 @@
 - 저장소 이동을 주 동작으로 배치 (모든 카드에 `프로젝트 열기` 버튼). 배포된 프로젝트는 저장소 대신 라이브 데모로 연결 — 저장소는 간단 설명 모달에서 접근
   - Dayflow → https://uzini-1412.github.io/dayflow/
   - Standard MES → http://8.230.7.222:7082 (사무/관리 화면. 로그인 필요 — 데모 계정은 모달에 안내)
+  - Standard CMS → http://34.158.221.189
 - 기술 스택 섹션 — 5개 프로젝트에서 실제로 쓴 것만 언어/프론트/백엔드/데이터/인프라로 분류
 - 프로젝트별 역할 표기 (개인 / 팀)
 - 설명 모달 딥링크 — `#mes` `#dayflow` `#cms` `#automation` `#webide`
@@ -72,7 +73,7 @@
 ### 미완료
 
 - `og:image` 미설정 (공유 시 미리보기 썸네일 없음) — 실제 화면 캡처 없이 채우지 않음
-- 라이브 데모는 Dayflow·MES만 연결됨 — CMS·Automation Suite·Web IDE는 아직 배포 전이라 저장소로 연결
+- 라이브 데모는 Dayflow·MES·CMS만 연결됨 — Automation Suite·Web IDE는 아직 배포 전이라 저장소로 연결
 - MES 데모는 4개 프론트(사무·현장·태블릿·대시보드) 중 사무/관리 화면만 카드에 연결. 나머지 3개는 모달에도 아직 안내 없음
 - `goorm_team_project`는 저장소에 zip 산출물만 있음 → 소스를 풀어 재정리 필요, 담당 역할 미기재
 - Git 커밋 이력 없음 (`main` 브랜치에 커밋 0개)
@@ -84,6 +85,6 @@
 
 ## 다음 작업
 
-1. 나머지 저장소(CMS·Automation Suite·Web IDE)도 배포되면 `프로젝트 열기`를 라이브 데모로 전환
+1. 나머지 저장소(Automation Suite·Web IDE)도 배포되면 `프로젝트 열기`를 라이브 데모로 전환
 2. MES의 현장·태블릿·대시보드 데모 주소도 모달에 안내 추가할지 검토
 3. `goorm_team_project` zip 해제 후 저장소 재구성 및 담당 역할 기재
