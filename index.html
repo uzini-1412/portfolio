@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=11" />
+    <link rel="stylesheet" href="./styles.css?v=12" />
   </head>
   <body>
     <a class="skip-link" href="#projects">프로젝트 목록으로 바로 가기</a>
@@ -162,17 +162,11 @@
             <div class="card-number">04</div>
             <div class="card-head"><span>TOOLING</span></div>
             <h3>Automation Suite</h3>
-            <p>반복되는 개발·업무 과정을 CLI로 옮긴 개인 자동화 도구 모음</p>
-            <div class="card-terminal">
-              <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div class="terminal-body">
-                <p><span class="terminal-prompt">$</span> ./automation-suite</p>
-                <p>[1] 개발 콘솔 — 브랜치 · 리뷰 · 테스트 · 최적화</p>
-                <p>[2] 업무일지 — 주간 작업 요약 생성</p>
-                <p>[3] 로그 에이전트 — 오류 원인 분석</p>
-              </div>
+            <p>반복되는 개발·업무 과정을 자동화한 개인 도구 모음 — Tkinter GUI 콘솔 + CLI</p>
+            <div class="card-shot">
+              <img src="./assets/automation-suite-gui.png" alt="Automation Suite 실제 실행 화면 — 브랜치 탭이 열린 MES 에이전트 콘솔 GUI" loading="lazy" width="1136" height="819" />
             </div>
-            <div class="tech-list"><span>Python</span><span>Claude</span><span>CLI</span><span>Git workflow</span></div>
+            <div class="tech-list"><span>Python</span><span>Tkinter</span><span>Claude</span><span>Git workflow</span></div>
             <div class="card-actions">
               <a class="button button-primary button-sm" href="./automation-demo.html" target="_blank" rel="noreferrer">프로젝트 열기 <span aria-hidden="true">↗</span></a>
               <button class="text-button" type="button" data-open-modal="modal-auto">간단 설명</button>
@@ -359,12 +353,16 @@
       <div class="detail-body">
         <p class="eyebrow">04 · TOOLING</p>
         <h2 id="modal-auto-title">Automation Suite</h2>
-        <p class="detail-lead">개발과 업무에서 반복되던 과정을 CLI 도구로 옮긴 개인 자동화 모음입니다.</p>
+        <p class="detail-lead">개발과 업무에서 반복되던 과정을 자동화한 개인 도구 모음입니다. Tkinter로 만든 GUI 콘솔이 메인이고, 스크립트로 바로 쓰는 CLI 모드도 지원합니다.</p>
         <p class="project-role">개인 프로젝트 · 전체 구현</p>
+
+        <div class="detail-shot">
+          <img src="./assets/automation-suite-gui.png" alt="실제 실행 화면 — 브랜치 탭이 열린 MES 에이전트 콘솔 GUI" loading="lazy" width="1136" height="819" />
+        </div>
 
         <h3>구성</h3>
         <ul class="detail-list">
-          <li><b>개발 콘솔</b> — 브랜치 생성, 코드 리뷰, 자동 개발, 테스트, 최적화 단계를 하나의 진입점에서 실행합니다.</li>
+          <li><b>개발 콘솔</b> — 탭으로 묶은 GUI에서 브랜치 생성, 코드 리뷰, 자동 개발, 테스트, 최적화, 명세 작성까지 실행합니다 (개발·문서·분석·정리·설정 5개 탭 그룹).</li>
           <li><b>주간 업무일지 생성기</b> — 커밋과 작업 기록을 모아 주간 단위 업무일지 초안을 만듭니다.</li>
           <li><b>로그 분석 에이전트</b> — 로그를 읽어 문제 지점과 원인 후보를 정리합니다.</li>
         </ul>

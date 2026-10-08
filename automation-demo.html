@@ -24,6 +24,9 @@
       .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; margin: 0 0 14px; }
       h1 { font-size: clamp(28px, 4.5vw, 40px); letter-spacing: -.045em; margin: 0 0 18px; }
       .lead { font-family: var(--kr); font-size: 15px; line-height: 1.8; color: var(--muted); margin: 0 0 28px; max-width: 58ch; }
+      .shot { margin-bottom: 28px; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); box-shadow: 10px 10px 0 rgba(27,29,27,.08); }
+      .shot img { display: block; width: 100%; height: auto; }
+      .shot-caption { margin: 0; padding: 10px 16px; font-family: var(--kr); font-size: 12px; color: var(--muted); background: #faf8f2; border-top: 1px solid var(--line); }
       .notice { font-family: var(--kr); font-size: 13px; line-height: 1.8; color: #5c5f5a; background: #faf8f2; border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin-bottom: 36px; }
       .notice code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; background: rgba(27,29,27,.07); padding: 1px 5px; border-radius: 4px; }
       .notice a { font-weight: 700; border-bottom: 1px solid currentColor; }
@@ -50,6 +53,7 @@
       @media (prefers-color-scheme: dark) {
         :root { --paper: #15201c; --ink: #f2f1ea; --muted: #9aa39d; --line: #33423c; }
         .notice { background: #1b2622; }
+        .shot-caption { background: #1b2622; }
       }
     </style>
   </head>
@@ -64,6 +68,11 @@
         <code style="font-family: ui-monospace, Menlo, Consolas, monospace;">feature</code> 타입과
         브랜치 이름 슬러그를 실시간으로 만들어 줍니다. 아래에서 직접 타이핑해서 확인해 보세요.
       </p>
+
+      <div class="shot">
+        <img src="./assets/automation-suite-gui.png" alt="실제 실행 화면 — 브랜치 탭이 열린 Tkinter GUI 콘솔" loading="lazy" width="1136" height="819" />
+        <p class="shot-caption">실제 실행 화면입니다 — 왼쪽 "주제" 입력란에 쓰면 Claude가 호출되고, 아래 데모는 그 호출이 실패했을 때의 폴백만 재현합니다.</p>
+      </div>
 
       <div class="notice">
         이 도구의 평소 동작은 Claude CLI를 호출해 주제를 분류합니다. 그건 브라우저에서 재현할 수 없어서,
